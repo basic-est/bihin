@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/theme.default.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+
+  <title>備品チェック</title>
+</head>
+<body>
+<div>
+    <p>
+        <a href="bihin_top.html">HOME</a>
+        >  備品チェック
+    </p>
+</div>
+
+<p>XXXXでログイン中</p>
+
+<h1>備品チェック</h1>
+
+<form action="bihin_top.html" method="get" name="checkForm">
+
+  <p>
+    <label for="checkDate">確認日</label>
+    <input type="date" id="checkDate" value="2021-10-01" readonly>
+  </p>
+
+  <table class="design06">
+    <thead>
+      <tr>
+        <th><input type="checkbox" disabled checked></th>
+        <th>備品</th>
+        <th>在庫数</th>
+        <th>実在庫数</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" id="chk1" onclick="switchDisable(0)"></td>
+        <td>A4用紙</td>
+        <td>5</td>
+        <td>
+          <input type="number" id="qty1" class="quantity" min="0">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="chk2" onclick="switchDisable(1)"></td>
+        <td>ふせん大</td>
+        <td>3</td>
+        <td>
+          <input type="number" id="qty2" class="quantity" min="0">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="chk3" onclick="switchDisable(2)"></td>
+        <td>ふせん中</td>
+        <td>4</td>
+        <td>
+          <input type="number" id="qty3" class="quantity" min="0">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    <input type="button" onclick="emptyCheck()" value="管理者へ報告">
+  </p>
+</form>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="../js/jquery.tablesorter.min.js"></script>
+<script src="../js/bihin_check.js"></script>
+
+</body>
+</html>

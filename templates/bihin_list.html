@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/theme.default.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+
+  <title>備品テーブル</title>
+</head>
+<body>
+<div>
+    <p>
+        <a href="bihin_top.html">HOME</a>
+        > <a href="bihin_menu.html">備品管理メニュー</a>
+        >  備品テーブル
+    </p>
+</div>
+
+<p>XXXXでログイン中</p>
+
+<h1>備品テーブル</h1>
+
+<form action="bihin_insert.html" method="post" name="insertForm">
+
+  <table id="bihin">
+    <thead>
+      <tr>
+        <th>備品番号</th>
+        <th>状態区分</th>
+        <th>備品名</th>
+        <th>在庫数</th>
+        <th>発注点</th>
+        <th>登録日</th>
+        <th>更新日</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>00000</td>
+        <td>有効</td>
+        <td><a href="javascript:goEditCheck('00000');">A4用紙</a></td>
+        <td>2</td>
+        <td>3</td>
+        <td>2021-10-01</td>
+        <td>2021-10-15</td>
+      </tr>
+      <tr>
+        <td>00001</td>
+        <td>無効</td>
+        <td><a href="javascript:goEditCheck('00001');">ふせん大</a></td>
+        <td>3</td>
+        <td>1</td>
+        <td>2021-10-01</td>
+        <td>2021-10-15</td>
+      </tr>
+      <tr>
+        <td>00002</td>
+        <td>有効</td>
+        <td><a href="javascript:goEditCheck('00002');">ふせん中</a></td>
+        <td>4</td>
+        <td>2</td>
+        <td>2021-10-01</td>
+        <td>2021-10-15</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <input type="button" onclick="addRowBihin()" value="+ 追加">
+  <input type="submit" name="submitBtn" value="追加を登録" disabled>
+</form>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="../js/jquery.tablesorter.min.js"></script>
+<script src="../js/bihin_list.js"></script>
+
+</body>
+</html>

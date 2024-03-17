@@ -1,0 +1,38 @@
+  .quantity{
+    width: 3em;
+  }
+
+  .error-message {
+    font-size: 12px;
+    color: #ff7676;
+    display: none; /* 非表示に */
+  }
+  
+  input:invalid {
+    border: solid 1px red;
+  }
+  
+  /* :invalid時だけ隣の要素を表示 */
+  input:invalid + .error-message  {
+    display: block;
+  }
+
+  .design06 {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+   }
+
+   .design06 th {
+    padding: 10px;
+    background: #778ca3;
+    border: solid 1px #666666;
+    color: #ffffff;
+   }
+   
+   .design06 td {
+    padding: 10px;
+    border: solid 1px #666666;
+   }
+   

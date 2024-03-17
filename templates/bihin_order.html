@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/theme.default.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+
+  <title>発注リスト</title>
+</head>
+<body>
+<div>
+    <p>
+        <a href="bihin_top.html">HOME</a>
+        > <a href="bihin_menu.html">備品管理メニュー</a>
+        >  発注リスト
+    </p>
+</div>
+
+<p>XXXXでログイン中</p>
+
+<h1>発注リスト</h1>
+
+<form action="bihin_menu.html" method="post" name="orderForm">
+  <table class="design06" id="order">
+    <thead>
+      <tr>
+        <th>備品番号</th>
+        <th>備品</th>
+        <th>在庫数</th>
+        <th>最低発注数量</th>
+        <th>発注数</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>00000</td>
+        <td>A4用紙</td>
+        <td>5</td>
+        <td>5</td>
+        <td>
+          <input type="number" id="qty1" class="quantity" min="0" value="5" step="5" required>
+          <div class="error-message">発注数が不正です</div>
+        </td>
+      </tr>
+      <tr>
+        <td>00001</td>
+        <td>ふせん大</td>
+        <td>3</td>
+        <td>10</td>
+        <td>
+          <input type="number" id="qty2" class="quantity" min="0" value="0" step="10" required>
+          <div class="error-message">発注数が不正です</div>
+        </td>
+      </tr>
+      <tr>
+        <td>00002</td>
+        <td>ふせん中</td>
+        <td>4</td>
+        <td>10</td>
+        <td>
+          <input type="number" id="qty3" class="quantity" min="0" value="0" step="10" required>
+          <div class="error-message">発注数が不正です</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    <input type="button" onclick="addRowOrder()" value="+ 追加">
+    <select name="month" hidden>
+      <option value="1">B5用紙</option>
+      <option value="2">ふせん小</option>
+      <option value="3">ティッシュボックス</option>
+    </select>
+  </p>
+
+  <p>
+    <input type="button" name="submitBtn" onclick="emptyCheck()" value="入荷確認">
+    <input type="button" value="キャンセル" onClick="history.back();">
+  </p>
+</form>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="../js/bihin_order.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/theme.default.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+
+  <title>ホーム</title>
+</head>
+<body>
+<div>
+    <p>
+        >  HOME
+    </p>
+</div>
+<form action="get">
+    <div>
+        <label for="userId">ユーザID</label>
+        <input type="text" id="userId" required>
+        <div class="error-message">ユーザIDを入力してください</div>
+    </div>
+    <div>
+        <label for="bihinName">パスワード</label>
+        <input type="password" id="bihinName" required>
+        <div class="error-message">パスワードを入力してください</div>
+    </div>      
+    <p>
+        <input type="button" name="submitBtn" onclick="emptyCheck()" value="ログイン">
+    </p>
+</form>
+<p>ログインしていません</p>
+<!-- <p>XXXXでログイン中</p> -->
+<h1>ホーム</h1>
+<ol>
+    <li><a href="bihin_consume.html">備品消費</a></li>
+    <li><a href="bihin_check.html">在庫チェック</a></li>
+    <li><a href="bihin_menu.html">備品管理メニュー</a></li>
+</ol>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="../js/jquery.tablesorter.min.js"></script>
+
+</body>
+</html>
